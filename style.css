@@ -19,6 +19,8 @@ body{
     border: none;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.253);
+
+    font-size: 55px;
 }
 
 
@@ -40,5 +42,22 @@ body{
 
 h1{
     font-size: 100px;
-    text-decoration: double;
+    
+}
+
+.resetBtn{
+    font-size: 30px;
+    background-color: darkgreen;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+}
+
+.resetBtn:hover{
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-1.5px);
+    scale: 1.02;
 }
