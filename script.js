@@ -33,6 +33,8 @@ box.forEach((box) => {
 })
 })
 
+const winn = document.getElementById('win')
+
 const checkWin = () => {
     for (let pattern of winningPatterns) {
         let pos1 = box[pattern[0]].innerText;
@@ -43,7 +45,7 @@ const checkWin = () => {
             if (pos1 === pos2 && pos2 === pos3) {
                 console.log(`winner ${pos1}` );
                 disableBox()
-                
+                winn.innerHTML = `Winner is ${pos1}`
             }
         }
     }
@@ -67,5 +69,7 @@ reset.addEventListener('click', () => {
     box.forEach((box) => {
         box.innerHTML= ''
     })
+    winn.innerHTML = ''
+    player = true;
     enableBox()
 })
