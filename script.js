@@ -11,7 +11,7 @@ let winningPatterns = [
 
 let player = true;
 const box = document.querySelectorAll(".box")
-
+let flag = 0;
 
 box.forEach((box) => {
     box.addEventListener('click', () => {
@@ -19,13 +19,13 @@ box.forEach((box) => {
     if(player){
         box.innerText = 'X'
         player = false;
-        
+        flag++;
         }
 
     else{
         box.innerHTML = 'O'
         player = true;
-        
+        flag++;
     }
     checkWin()
 }
@@ -49,6 +49,13 @@ const checkWin = () => {
             }
         }
     }
+    
+    if(flag === 9) {
+        winn.innerHTML = `Draw`
+        disableBox()
+        flag = 0;
+    }
+
 };
 
 const disableBox = () => {
@@ -73,3 +80,4 @@ reset.addEventListener('click', () => {
     player = true;
     enableBox()
 })
+
