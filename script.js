@@ -79,6 +79,7 @@ reset.addEventListener('click', () => {
     })
     winn.innerHTML = ''
     player = true;
+    flag = 0;
     enableBox()
 })
 
