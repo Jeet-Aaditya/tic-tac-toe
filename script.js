@@ -54,3 +54,18 @@ const disableBox = () => {
         box.style.pointerEvents = 'none';
     });
 };
+
+const enableBox = () => {
+    box.forEach((box) => {
+        box.style.pointerEvents = 'all';
+    });
+};
+
+let reset = document.querySelector('.resetBtn')
+
+reset.addEventListener('click', () => {
+    box.forEach((box) => {
+        box.innerHTML= ''
+    })
+    enableBox()
+})
