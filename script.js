@@ -62,6 +62,7 @@ const disableBox = () => {
     box.forEach((box) => {
         box.style.pointerEvents = 'none';
     });
+    flag = 0;
 };
 
 const enableBox = () => {
