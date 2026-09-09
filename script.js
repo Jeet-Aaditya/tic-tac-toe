@@ -15,7 +15,16 @@ const box = document.querySelectorAll(".box")
 
 box.forEach((box) => {
     box.addEventListener('click', () => {
-    box.innerText = 'X'
+    
+    if(player){
+        box.innerText = 'X'
+        player = false;
+        }
+
+    else{
+        box.innerHTML = 'O'
+        player = true;
+    }
     console.log('e')    
 })
 })
